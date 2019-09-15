@@ -1,6 +1,6 @@
 # URL Shortening project
 
-## Prerequisites
+## Prerequisites:
 For test and run this project you just need to have `mvn` command in your path.
 
 ## Run all tests:
