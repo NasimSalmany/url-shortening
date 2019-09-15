@@ -4,7 +4,7 @@
 For test and run this project you just need to have `mvn` command in your path.
 
 ## Run all tests:
-There are 8 functional and integration tests for project and you can run them by this command:
+There are several integration and unit tests for project, you can run them by this command:
 
     mvn test
 
