@@ -18,18 +18,14 @@ import static org.junit.Assert.assertEquals;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 public class IdConverterUnitTest {
-
-
     @Autowired
     private IdConverterService idConverterService;
-
 
     @Test
     public void success_encode_125_base10_to_base62() {
         String base62Str = idConverterService.encode(125);
         assertEquals("cb", base62Str);
     }
-
 
     @Test
     public void success_encode_19158_base10_to_base62() {
@@ -59,5 +55,4 @@ public class IdConverterUnitTest {
         long j = idConverterService.decode("e9a");
         assertEquals(19158, j);
     }
-
 }
