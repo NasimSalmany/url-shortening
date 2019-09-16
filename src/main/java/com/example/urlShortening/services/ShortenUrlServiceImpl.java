@@ -45,7 +45,7 @@ public class ShortenUrlServiceImpl implements ShortenUrlService {
     }
 
     @Override
-    public Optional<ShortenUrl> getShortenUrl(String shortenUrl) {
-        return shortenUrlRepository.findById(idConverterService.decode(shortenUrl));
+    public Optional<ShortenUrl> getShortenUrl(String shortenKey) {
+        return shortenUrlRepository.findById(idConverterService.decode(shortenKey));
     }
 }

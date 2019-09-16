@@ -11,5 +11,5 @@ public interface ShortenUrlService {
 
     String shortenUrl(String originalUrl);
 
-    Optional<ShortenUrl> getShortenUrl(String shortenUrl);
+    Optional<ShortenUrl> getShortenUrl(String shortenKey);
 }
