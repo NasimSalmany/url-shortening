@@ -23,36 +23,36 @@ public class IdConverterUnitTest {
 
     @Test
     public void success_encode_125_base10_to_base62() {
-        String base62Str = idConverterService.encode(125);
+        String base62Str = idConverterService.encode(125L);
         assertEquals("cb", base62Str);
     }
 
     @Test
     public void success_encode_19158_base10_to_base62() {
-        String s = idConverterService.encode(19158);
+        String s = idConverterService.encode(19158L);
         assertEquals("e9a", s);
     }
 
     @Test
     public void success_encode_base10_to_base62() {
-        assertEquals("ba", idConverterService.encode(62));
-        assertEquals("bb", idConverterService.encode(63));
-        assertEquals("bc", idConverterService.encode(64));
-        assertEquals("b9", idConverterService.encode(123));
-        assertEquals("ca", idConverterService.encode(124));
-        assertEquals("c9", idConverterService.encode(185));
+        assertEquals("ba", idConverterService.encode(62L));
+        assertEquals("bb", idConverterService.encode(63L));
+        assertEquals("bc", idConverterService.encode(64L));
+        assertEquals("b9", idConverterService.encode(123L));
+        assertEquals("ca", idConverterService.encode(124L));
+        assertEquals("c9", idConverterService.encode(185L));
     }
 
     @Test
     public void success_encode_biggest_possible_integer_base10_to_base62() {
-        assertEquals("cvuMLb", idConverterService.encode(Integer.MAX_VALUE));
+        assertEquals("k9viXaIfiWh", idConverterService.encode(Long.MAX_VALUE));
     }
 
     @Test
     public void success_decode_base62_to_base10() {
         long i = idConverterService.decode("cb");
-        assertEquals(125, i);
+        assertEquals(125L, i);
         long j = idConverterService.decode("e9a");
-        assertEquals(19158, j);
+        assertEquals(19158L, j);
     }
 }
